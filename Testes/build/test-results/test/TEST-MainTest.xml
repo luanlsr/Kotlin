@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainTest" tests="2" skipped="1" failures="0" errors="0" timestamp="2022-07-13T19:58:41" hostname="LUAN-RAMALHO" time="0.032">
+  <properties/>
+  <testcase name="naoImplementado()" classname="MainTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase name="Teste metodo xxoo" classname="MainTest" time="0.03"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
