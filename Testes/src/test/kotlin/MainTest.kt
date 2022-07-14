@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Disabled
-import org.junit.jupiter.api.DisplayName
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.*
 
 class MainTest {
 
@@ -18,5 +15,23 @@ class MainTest {
     @Disabled
     fun naoImplementado(){
 
+    }
+
+    @Test
+    fun vaiFalhar(){
+        fail("não posso terminar os testes sem esse método.")
+    }
+
+    @Test
+    fun assumptions(){
+        Assumptions.assumeTrue(countXO("xxoo"))
+        // o de baixo roda dependendo do de cima
+        Assertions.assertTrue(abc())
+    }
+
+    @Test
+    fun exception(){
+        assertThrows<NullPointerException> { abc2() }
+        // o de baixo roda dependendo do de cima
     }
 }
