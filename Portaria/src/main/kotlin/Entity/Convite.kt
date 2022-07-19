@@ -1,5 +1,5 @@
 package Entity
 
-class Convite(val tipo: String, val cod: String) {
+class Convite(var tipo: String = "", var cod: String = "", idade: Int) {
 
 }

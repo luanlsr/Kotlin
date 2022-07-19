@@ -15,21 +15,22 @@ class Portaria {
 
     private fun controle(): String {
         val idade = Console.readInt("Qual sua idade? ")
+        val convidado = Convite(idade = idade)
+
         if (!conviteValidations.maiorDeIdade(idade)) {
             return "Negado. Menores de idade não são permitidos."
         }
 
-        val tipoConvite = Console.readString("Qual é o tipo de convite? ")
-        if(!conviteValidations.tipoValido(tipoConvite)){
+        convidado.tipo = Console.readString("Qual é o tipo de convite? ")
+        if(!conviteValidations.tipoValido(convidado.tipo)){
             return "Negado. Convite inválido"
         }
 
-        var codigo = Console.readString("Qual o código do convite? ")
-        if (conviteValidations.codigoValido(codigo)) {
-            codigo = codigo.lowercase()
-            val convite = Convite(tipoConvite, codigo)
+        convidado.cod = Console.readString("Qual o código do convite? ")
+        if (conviteValidations.codigoValido(convidado.cod)) {
+            convidado.cod = convidado.cod.lowercase()
 
-            if (!conviteValidations.validaConvite(convite)) {
+            if (!conviteValidations.validaConvite(convidado)) {
                 return "Negado. Convite inválido"
             }
             return "Welcome :)"
